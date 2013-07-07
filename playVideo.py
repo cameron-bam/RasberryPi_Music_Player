@@ -28,8 +28,8 @@ class RasberryPiYoutubePlayer():
 		
 		if (self.song_status != True):
 			self.song_status = True
-			elem = self.webbrowser.find_element_by_id("player")
-			elem.send_keys("seleniumhq" + Keys.ENTER)
+			elem = self.webbrowser.find_element_by_id("player-branded-banner")
+			elem.send_keys("seleniumhq" + Keys.SPACE)
 	
 	def stop_video(self, browser):
 		'''Stop(close) youtube player'''
