@@ -6,7 +6,7 @@ import gdata.youtube.service
 class RasberryPiYoutubePlayer():
 
 	def __init__(self, search_terms):
-        self.search_terms = search_terms
+	        self.search_terms = search_terms
 		self.song = self.get_song(self.search_terms)
 		#self.song_status = False
 		self.start_video()
@@ -41,14 +41,14 @@ class RasberryPiYoutubePlayer():
 		#Developer Key
 		yt_service.developer_key = 'AI39si71VwXnUB0txaRgzJBqVClvLxWbnAf7f_Q_NUnwKsq_QbaZz3UmiGMwW95fTQWnT9OR_T7CpwXk-Dr3w12QdSvlhyFatw'
 		#Query 
-		youtube.service.YouTubeVideoQuery()
+		query = gdata.youtube.service.YouTubeVideoQuery()
  	 	query.vq = search_terms
   		query.orderby = 'viewCount'
   		feed = yt_service.YouTubeQuery(query)
 		entry = feed.entry[0]
 		song_id = entry.id
 		print song_id
-		return song_url
+		return song_id
 	
 	
 
