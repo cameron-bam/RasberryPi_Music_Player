@@ -8,7 +8,6 @@ class RasberryPiYoutubePlayer():
 	def __init__(self, search_terms):
 		self.search_terms = search_terms
 		self.song = self.get_song(self.search_terms)
-		#self.song_status = False
 		self.start_video()
 
 
@@ -53,6 +52,4 @@ class RasberryPiYoutubePlayer():
 	
 	
 
-if __name__ == "__main__":
-	player = RasberryPiYoutubePlayer('Welcome To the Jungle')
 	
