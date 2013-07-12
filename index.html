@@ -1,11 +1,15 @@
 <!DOCTYPE html>
+{% autoescape true %}
 <html>
-	<head>
-		<script type="text/javascript" src="/scripts/index.js"></script>
-	</head>  
+ 	<head>
+		<link type="text/css" rel="stylesheet" href="/stylesheets/index.css" />
+		<script type="text/javascript" src="index.js"></script>
+	</head>
 	<body>
-    		<!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-    		<input readonly="readonly" type="hidden" id="vidID" name="variableID" value="{{ videoID }}">
-		<div id="player"></div>
+
+    		<a href="{{ url|safe }}">{{ url_linktext }}</a>
+    		<h1>Music Player</h1>	
   	</body>
 </html>
+{% endautoescape %}
+

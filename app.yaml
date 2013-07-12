@@ -11,13 +11,15 @@ libraries:
   version: latest
 
 
+
 handlers:
 
 - url: /stylesheets
   static_dir: stylesheets
+
 - url: /scripts
   static_dir: scripts
 
 - url: /.*
-  script: youtubePlayer.application
+  script: index.application
 
